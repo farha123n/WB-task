@@ -1,0 +1,49 @@
+@keyframes colorToggle {
+  0%, 100%  {
+    color: rgba(255,255,255); /* Full red color */
+  }
+  50%{
+      color: rgba(255, 0, 0, 0); /* Transparent */
+  }
+}
+
+.animate-color-toggle {
+  animation: colorToggle 2s infinite;
+}
+@media (min-width:700px) {
+  @keyframes colorToggle {
+    0%, 100%  {
+      color: #ef4a23;
+         /* Full red color */
+    }
+    50%{
+        color: rgba(255, 0, 0, 0); /* Transparent */
+    }
+  }
+  
+  .animate-color-toggle {
+    animation: colorToggle 2s infinite;
+  } 
+}
+.box-with-bottom-shadow {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  font-size: 18px;
+}
+.hidden {
+  display: none;
+}
+
+.menu {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu.visible {
+  display: flex; /* Ensure it's displayed */
+  transform: translateX(0);
+}
+
